@@ -1,0 +1,1618 @@
+Program.Sub.ScreenSU.Start
+Gui.frmCRM..Create(BaseForm)
+Gui.frmCRM..Size(17730,12780)
+Gui.frmCRM..MinX(130000)
+Gui.frmCRM..MinY(10000)
+Gui.frmCRM..Position(0,0)
+Gui.frmCRM..BackColor(-2147483633)
+Gui.frmCRM..MousePointer(0)
+Gui.frmCRM..Caption("CRM Dashboard")
+Gui.frmCRM..Event(Resize,frmCRM_Resize)
+Gui.frmCRM..Event(UnLoad,frmCRM_UnLoad)
+Gui.frmCRM..AlwaysOnTop(False)
+Gui.frmCRM..FontName("Tahoma")
+Gui.frmCRM..FontSize(8.25)
+Gui.frmCRM..ControlBox(True)
+Gui.frmCRM..MaxButton(True)
+Gui.frmCRM..MinButton(True)
+Gui.frmCRM..Moveable(True)
+Gui.frmCRM..Sizeable(True)
+Gui.frmCRM..ShowInTaskBar(True)
+Gui.frmCRM..TitleBar(True)
+Gui.frmCRM.tabCRM.Create(Tab)
+Gui.frmCRM.tabCRM.Size(17700,11265)
+Gui.frmCRM.tabCRM.Position(0,1065)
+Gui.frmCRM.tabCRM.Enabled(True)
+Gui.frmCRM.tabCRM.Visible(True)
+Gui.frmCRM.tabCRM.Zorder(0)
+Gui.frmCRM.tabCRM.FontName("Tahoma")
+Gui.frmCRM.tabCRM.FontSize(8.25)
+Gui.frmCRM.tabCRM.Tabs(3)
+Gui.frmCRM.tabCRM.SetTab(0)
+Gui.frmCRM.tabCRM.Caption("Opportunities")
+Gui.frmCRM.tabCRM.SetTab(1)
+Gui.frmCRM.tabCRM.Caption("Events")
+Gui.frmCRM.tabCRM.SetTab(2)
+Gui.frmCRM.tabCRM.Caption("Notes")
+Gui.frmCRM.GsGCNotes.Create(GsGridControl)
+Gui.frmCRM.GsGCNotes.Size(15105,7485)
+Gui.frmCRM.GsGCNotes.Position(0,0)
+Gui.frmCRM.GsGCNotes.Parent("tabCRM",2)
+Gui.frmCRM.GsGCNotes.Event(RowCellClick,GsGCNotes_RowCellClick)
+Gui.frmCRM.GsGCNotes.Enabled(True)
+Gui.frmCRM.GsGCNotes.Visible(True)
+Gui.frmCRM.GsGCNotes.Zorder(0)
+Gui.frmCRM.GsGCNotes.Dock(5)
+Gui.frmCRM.GsGCEvents.Create(GsGridControl)
+Gui.frmCRM.GsGCEvents.Size(15105,7485)
+Gui.frmCRM.GsGCEvents.Position(0,0)
+Gui.frmCRM.GsGCEvents.Parent("tabCRM",1)
+Gui.frmCRM.GsGCEvents.Event(RowCellClick,GsGCEvents_RowCellClick)
+Gui.frmCRM.GsGCEvents.Enabled(True)
+Gui.frmCRM.GsGCEvents.Visible(True)
+Gui.frmCRM.GsGCEvents.Zorder(0)
+Gui.frmCRM.GsGCEvents.Dock(5)
+Gui.frmCRM.GsGCOpp.Create(GsGridControl)
+Gui.frmCRM.GsGCOpp.Size(17670,4950)
+Gui.frmCRM.GsGCOpp.Position(0,0)
+Gui.frmCRM.GsGCOpp.Parent("tabCRM",0)
+Gui.frmCRM.GsGCOpp.Event(RowCellClick,gsgcOpp_RowCellClick)
+Gui.frmCRM.GsGCOpp.Enabled(True)
+Gui.frmCRM.GsGCOpp.Visible(True)
+Gui.frmCRM.GsGCOpp.Zorder(0)
+Gui.frmCRM.GsGCOpp.Dock(1)
+Gui.frmCRM.GsGCOpp.Event(CellValueChanged,GsGCOpp_CellValueChanged)
+Gui.frmCRM.GsGCOpp.Event(ColumnFilterChanged,GsGCOpp_ColumnFilterChanged)
+Gui.frmCRM.gsChartMonthlyHardware.Create(GsChart)
+Gui.frmCRM.gsChartMonthlyHardware.Enabled(True)
+Gui.frmCRM.gsChartMonthlyHardware.Visible(True)
+Gui.frmCRM.gsChartMonthlyHardware.Zorder(0)
+Gui.frmCRM.gsChartMonthlyHardware.Size(5805,5805)
+Gui.frmCRM.gsChartMonthlyHardware.Position(0,4995)
+Gui.frmCRM.gsChartMonthlyHardware.Dock(0)
+Gui.frmCRM.gsChartMonthlyHardware.Parent("tabCRM",0)
+Gui.frmCRM.gsChartMonthlyRevenue.Create(GsChart)
+Gui.frmCRM.gsChartMonthlyRevenue.Enabled(True)
+Gui.frmCRM.gsChartMonthlyRevenue.Visible(True)
+Gui.frmCRM.gsChartMonthlyRevenue.Zorder(0)
+Gui.frmCRM.gsChartMonthlyRevenue.Size(5805,5805)
+Gui.frmCRM.gsChartMonthlyRevenue.Position(5940,4995)
+Gui.frmCRM.gsChartMonthlyRevenue.Parent("tabCRM",0)
+Gui.frmCRM.gsChartMonthlyVolume.Create(GsChart)
+Gui.frmCRM.gsChartMonthlyVolume.Enabled(True)
+Gui.frmCRM.gsChartMonthlyVolume.Visible(True)
+Gui.frmCRM.gsChartMonthlyVolume.Zorder(0)
+Gui.frmCRM.gsChartMonthlyVolume.Size(5805,5805)
+Gui.frmCRM.gsChartMonthlyVolume.Position(11865,4995)
+Gui.frmCRM.gsChartMonthlyVolume.Parent("tabCRM",0)
+Gui.frmCRM.progressBar1.Create(ProgressBar)
+Gui.frmCRM.progressBar1.Size(2745,240)
+Gui.frmCRM.progressBar1.Position(90,300)
+Gui.frmCRM.progressBar1.Visible(False)
+Gui.frmCRM.progressBar1.Max(100)
+Gui.frmCRM.lblStatus.Create(Label,"****Change****",False,2700,180,0,90,120,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmCRM.lblStatus.BorderStyle(0)
+Gui.frmCRM.picGSSLogo.Create(PictureBox)
+Gui.frmCRM.picGSSLogo.Size(4125,960)
+Gui.frmCRM.picGSSLogo.Position(7080,45)
+Gui.frmCRM.picGSSLogo.Event(DblClick,picGSSLogo_DblClick)
+Gui.frmCRM.picGSSLogo.ToolTip("Double-Click for additional functions")
+Gui.frmCRM.picGSSLogo.Enabled(True)
+Gui.frmCRM.picGSSLogo.Visible(True)
+Gui.frmCRM.picGSSLogo.Zorder(0)
+Gui.frmCRM.framePermissions.Create(Frame)
+Gui.frmCRM.framePermissions.Size(1965,600)
+Gui.frmCRM.framePermissions.Position(15750,75)
+Gui.frmCRM.framePermissions.Enabled(True)
+Gui.frmCRM.framePermissions.Visible(True)
+Gui.frmCRM.framePermissions.Zorder(0)
+Gui.frmCRM.framePermissions.Caption("")
+Gui.frmCRM.framePermissions.FontName("Tahoma")
+Gui.frmCRM.framePermissions.FontSize(8.25)
+Gui.frmCRM.framePermissions.BorderStyle(3)
+Gui.frmCRM.optView.Create(Option)
+Gui.frmCRM.optView.Size(720,255)
+Gui.frmCRM.optView.Position(180,195)
+Gui.frmCRM.optView.Caption("View")
+Gui.frmCRM.optView.Parent("framePermissions")
+Gui.frmCRM.optView.Enabled(True)
+Gui.frmCRM.optView.Visible(True)
+Gui.frmCRM.optView.Zorder(0)
+Gui.frmCRM.optView.FontName("Tahoma")
+Gui.frmCRM.optView.FontSize(8.25)
+Gui.frmCRM.optEdit.Create(Option)
+Gui.frmCRM.optEdit.Enabled(False)
+Gui.frmCRM.optEdit.Size(720,255)
+Gui.frmCRM.optEdit.Position(1095,195)
+Gui.frmCRM.optEdit.Caption("Edit")
+Gui.frmCRM.optEdit.Parent("framePermissions")
+Gui.frmCRM.optEdit.Visible(True)
+Gui.frmCRM.optEdit.Zorder(0)
+Gui.frmCRM.optEdit.FontName("Tahoma")
+Gui.frmCRM.optEdit.FontSize(8.25)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+	V.Global.bLoadData.Declare
+	v.Global.bEditQuote.Declare
+	v.Global.bEditSO.Declare
+	v.Global.bEditCRM.Declare
+	v.Global.bViewQuote.Declare
+	v.Global.bViewSO.Declare
+	v.Global.bViewCRM.Declare
+	v.Global.sUserGroups.Declare
+	v.Global.bIsCRMsupervisor.Declare
+
+	Program.External.Include.Library("PPT_Canny.lib")
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'GCG_6335_CRMDashboard.g2u
+'Trey S
+'April 25th, 2021
+'For Recovery Force
+'Quote 12864
+'Ticket REC010-4720210748-0
+'This is a modification of the standard CRM Dashboard [Customer Relationship Management > View > CRM Dashboard]
+'This adds several extra manual entry fields for recovery force which are stored in custom tables GCG_6335_FIELDS
+'As well as several calculated fields and charts for these
+
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.bGroup.Declare
+	V.Local.sIcon.Declare
+	V.Local.sGssLogo.Declare
+	
+	F.Intrinsic.String.Build("{0}\ART\gss2.ico",V.Caller.GlobalDir,v.Local.sIcon)		
+	F.Intrinsic.String.Build("{0}\ART\GAB_GSS_Logo_Green_Dash.png",V.Caller.GlobalDir,V.Local.sGssLogo)
+	Gui.frmCRM..Icon(V.Local.sIcon)
+	Gui.frmCRM.picGSSLogo.Picture(V.Local.sGssLogo)
+	
+	'Canny
+	F.Intrinsic.Control.CallSub(CannyCheckUser,"Form","frmCRM")
+	
+	'CRM SECURITY
+	F.Intrinsic.Control.CallSub(CheckCRMSecurity)
+	
+	Gui.frmCRM.optView.Value(True)
+	Gui.frmCRM.optEdit.Value(False)
+	
+	F.Intrinsic.Control.CallSub(SetAnchors)
+	f.Intrinsic.Control.CallSub(checkpermissions)
+
+	F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass,500)
+	Gui.frmCRM.tabCRM.SetTab(0)
+	Gui.frmCRM..Show
+	
+	F.Intrinsic.Control.CallSub(cmdrefresh_click)
+	
+	f.Intrinsic.Control.CallSub(SetContextMenus)	
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.CheckPermissions.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	v.Local.bChecked.Declare(boolean,false)
+	
+	'User permissions for View Option	
+	'Order Entry > View > Sales Orders	
+	F.Global.Security.CheckUserAccessIPM(131,0,V.Global.bViewSO)
+	'Estimating / Routing & Quote Management > View > Quotes	
+	F.Global.Security.CheckUserAccessIPM(493,0,V.Global.bViewQuote)
+	'Customer Relationship Management > File > CRM
+	F.Global.Security.CheckUserAccessIPM(242,0,V.Global.bViewCRM)
+	f.Intrinsic.Control.If(v.Global.bViewCRM,=,true,or,v.Global.bViewQuote,=,true,v.Global.bViewSO,=,true)
+		Gui.frmCRM.optView.Enabled(True)
+		f.Intrinsic.Control.If(v.Local.bChecked,=,False)
+			Gui.frmCRM.optView.Value(True)
+			v.Local.bChecked.Set(True)
+		f.Intrinsic.Control.EndIf		
+	f.Intrinsic.Control.Else
+		Gui.frmCRM.optView.Enabled(False)
+		Gui.frmCRM.optView.Value(False)
+		v.Local.bChecked.Set(False)
+	f.Intrinsic.Control.EndIf
+		
+	'User permissions for Edit Option
+	F.Global.Security.CheckUserAccessIPM(132,1,V.Global.bEditSO) 'Order Entry > File > Sales Orders > Open
+	F.Global.Security.CheckUserAccessIPM(484,1,V.Global.bEditQuote) 'Estimating / Routing & Quote Management > File > Quick Quote > Open
+	F.Global.Security.CheckUserAccessIPM(243,0,V.Global.bEditCRM) 'Estimating / Routing & Quote Management > File > Quick Quote > Open
+	
+	f.Intrinsic.Control.If(v.Global.bEditCRM,=,true,or,v.Global.bEditQuote,=,true,v.Global.bEditSO,=,true)
+		Gui.frmCRM.optEdit.Enabled(True)
+		f.Intrinsic.Control.If(v.Local.bChecked,=,False)
+			Gui.frmCRM.optEdit.Value(True)
+			v.Local.bChecked.Set(True)
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.Else
+		Gui.frmCRM.optEdit.Enabled(False)
+		Gui.frmCRM.optEdit.Value(False)
+		v.Local.bChecked.Set(False)
+	f.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndTry
+Program.Sub.CheckPermissions.End
+
+Program.Sub.frmCRM_UnLoad.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	F.Intrinsic.Control.If(V.Global.bLoadData)
+		F.Intrinsic.Control.CallSub(Serialize)
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.Close
+	F.Intrinsic.Control.End 
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmCRM_UnLoad.End
+
+Program.Sub.frmCRM_Resize.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.iHeight.Declare(Long)
+	V.Local.iWidth.Declare(Long)
+
+'	'Let Form grow larger than 15375, but not lower
+'	F.Intrinsic.Control.If(V.Screen.frmCRM.Width,<,15375)
+'		Gui.frmCRM..Size(15375,V.Screen.frmCRM.Height)
+'	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.CallSub(ResizeCharts)
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmCRM_Resize.End
+
+Program.Sub.ResizeCharts.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+	
+V.Local.iChartInterval.Declare(Long, 135)
+V.Local.iGridInterval.Declare(Long, 45)
+V.Local.iStartingGridSize.Declare(Long, 4950)
+V.Local.iStartingChartSize.Declare(Long, 5805)
+V.Local.iNewWidth.Declare(Long)
+V.Local.iNewHeight.Declare(Long)
+V.Local.fGridPercentage.Declare(Float)
+V.Local.iTemp.Declare(Long)
+V.Local.iNewChartWidth.Declare(Long)
+V.Local.iNewChartHeight.Declare(Long)
+V.Local.iNewChartPositionY.Declare(Long)
+V.Local.iNewChartPositionX.Declare(Long)
+V.Local.iNewGridHeight.Declare(Long)
+V.Local.iDistanctBetweenChartAndBotton.Declare(Long, 465)
+
+'grab new width
+V.Local.iNewWidth.Set(V.Screen.frmCRM!tabCRM.Width)
+
+'grab new height
+V.Local.iNewHeight.Set(V.Screen.frmCRM!tabCRM.Height)
+
+'calculate new chart width
+F.Intrinsic.Math.Sub(V.Local.iNewWidth, 135, 135, V.Local.iNewChartWidth)
+F.Intrinsic.Math.Div(V.Local.iNewChartWidth, 3, V.Local.iNewChartWidth)
+
+'calculate new grid height
+F.Intrinsic.Math.Add(V.Local.iStartingChartSize, V.Local.iStartingGridSize, V.Local.iTemp)
+F.Intrinsic.Math.Div(V.Local.iStartingGridSize, V.Local.iTemp, V.Local.fGridPercentage)
+F.Intrinsic.Math.Mult(V.Local.iNewHeight, V.Local.fGridPercentage, V.Local.iNewGridHeight)
+
+'calculate new chart starting position
+F.Intrinsic.Math.Add(V.Local.iNewGridHeight, V.Local.iGridInterval, V.Local.iNewChartPositionY)
+
+'calculate new chart height
+F.Intrinsic.Math.Sub(V.Local.iNewHeight, V.Local.iGridInterval, V.Local.iNewGridHeight, V.Local.iDistanctBetweenChartAndBotton, V.Local.iNewChartHeight)
+
+GUI.frmCRM.GsGCOpp.Size(V.Screen.frmCRM!GsGCOpp.Width, V.Local.iNewGridHeight)
+
+V.Local.iNewChartPositionX.Set(0)
+GUI.frmCRM.gsChartMonthlyHardware.Position(V.Local.iNewChartPositionX, V.Local.iNewChartPositionY)
+GUI.frmCRM.gsChartMonthlyHardware.Size(V.Local.iNewChartWidth, V.Local.iNewChartHeight)
+
+F.Intrinsic.Math.Add(V.Local.iNewChartPositionX, V.Local.iNewChartWidth, V.Local.iChartInterval, V.Local.iNewChartPositionX)
+GUI.frmCRM.gsChartMonthlyRevenue.Position(V.Local.iNewChartPositionX, V.Local.iNewChartPositionY)
+GUI.frmCRM.gsChartMonthlyRevenue.Size(V.Local.iNewChartWidth, V.Local.iNewChartHeight)
+
+F.Intrinsic.Math.Add(V.Local.iNewChartPositionX, V.Local.iNewChartWidth, V.Local.iChartInterval, V.Local.iNewChartPositionX)
+GUI.frmCRM.gsChartMonthlyVolume.Position(V.Local.iNewChartPositionX, V.Local.iNewChartPositionY)
+GUI.frmCRM.gsChartMonthlyVolume.Size(V.Local.iNewChartWidth, V.Local.iNewChartHeight)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.ResizeCharts.End
+
+Program.Sub.SetAnchors.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	'0 - None
+	'1 - Top
+	'2 - Bottom
+	'4 - Left
+	'8 - Right
+
+	Gui.frmCRM.picGSSLogo.Anchor(1)
+	Gui.frmCRM.tabCRM.Anchor(15)
+	Gui.frmCRM.framePermissions.Anchor(9)
+	Gui.frmCRM.lblStatus.Anchor(5)
+	Gui.frmCRM.progressBar1.Anchor(5)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndTry
+Program.Sub.SetAnchors.End
+
+Program.Sub.SetContextMenus.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	Gui.frmCRM..ContextMenuCreate("ctxOpp")
+	Gui.frmCRM.GsGCOpp.ContextMenuAttach("ctxOpp")
+	Gui.frmCRM..ContextMenuAddItem("ctxOpp","Refresh",0,"Refresh")
+	Gui.frmCRM..ContextMenuAddItem("ctxOpp","Export",0,"Export")
+	Gui.frmCRM..ContextMenuAddItem("ctxOpp","ResetColumns",0,"Reset Columns")
+	Gui.frmCRM..ContextMenuSetItemEventHandler("ctxOpp","Refresh","MenuClickRefresh")
+	Gui.frmCRM..ContextMenuSetItemEventHandler("ctxOpp","Export","MenuClickExport")
+	Gui.frmCRM..ContextMenuSetItemEventHandler("ctxOpp","ResetColumns","MenuClickResetColumns")
+	
+	Gui.frmCRM..ContextMenuCreate("ctxEvents")
+	Gui.frmCRM.GsGCEvents.ContextMenuAttach("ctxEvents")
+	Gui.frmCRM..ContextMenuAddItem("ctxEvents","Refresh",0,"Refresh")
+	Gui.frmCRM..ContextMenuAddItem("ctxEvents","Export",0,"Export")
+	Gui.frmCRM..ContextMenuAddItem("ctxEvents","ResetColumns",0,"Reset Columns")
+	Gui.frmCRM..ContextMenuSetItemEventHandler("ctxEvents","Refresh","MenuClickRefresh")
+	Gui.frmCRM..ContextMenuSetItemEventHandler("ctxEvents","Export","MenuClickExport")
+	Gui.frmCRM..ContextMenuSetItemEventHandler("ctxEvents","ResetColumns","MenuClickResetColumns")
+	
+	Gui.frmCRM..ContextMenuCreate("ctxNotes")
+	Gui.frmCRM.GsGCNotes.ContextMenuAttach("ctxNotes")
+	Gui.frmCRM..ContextMenuAddItem("ctxNotes","Refresh",0,"Refresh")
+	Gui.frmCRM..ContextMenuAddItem("ctxNotes","Export",0,"Export")
+	Gui.frmCRM..ContextMenuAddItem("ctxNotes","ResetColumns",0,"Reset Columns")
+	Gui.frmCRM..ContextMenuSetItemEventHandler("ctxNotes","Refresh","MenuClickRefresh")
+	Gui.frmCRM..ContextMenuSetItemEventHandler("ctxNotes","Export","MenuClickExport")
+	Gui.frmCRM..ContextMenuSetItemEventHandler("ctxNotes","ResetColumns","MenuClickResetColumns")
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.SetContextMenus.End
+
+Program.Sub.MenuClickRefresh.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	F.Intrinsic.Control.CallSub(cmdRefresh_Click)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.MenuClickRefresh.End
+
+Program.Sub.MenuClickExport.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sFileExport.Declare
+	V.Local.bExcel.Declare
+	V.Local.bFileLocked.Declare
+	V.Local.sMsg.Declare
+	V.Local.sControl.Declare
+	
+	F.Intrinsic.Control.SelectCase(V.Args.MenuName)
+		F.Intrinsic.Control.Case("CTXOPP")
+			V.Local.sControl.Set("GsGCOpp")
+		F.Intrinsic.Control.Case("CTXEVENTS")
+			V.Local.sControl.Set("GsGCEvents")
+		F.Intrinsic.Control.Case("CTXNOTES")
+			V.Local.sControl.Set("GsGCNotes")
+	F.Intrinsic.Control.EndSelect
+
+	F.Automation.MSExcel.CheckPresence(V.Local.bExcel)
+	F.Intrinsic.Control.If(V.Local.bExcel)
+		F.Intrinsic.String.Build("{0}\GAB_4167_{1}_Export.xlsx",V.Caller.LocalGssTempDir,V.Local.sControl,V.Local.sFileExport)
+		F.Intrinsic.File.IsFileLocked(V.Local.sFileExport,V.Local.bFileLocked)
+		F.Intrinsic.Control.If(V.Local.bFileLocked)
+			F.Intrinsic.String.Build("File is already open. Please close and export again.{0}File: {1}",V.Ambient.NewLine,V.Local.sFileExport,V.Local.sMsg)
+			F.Intrinsic.UI.Msgbox(V.Local.sMsg,"File In Use")
+		F.Intrinsic.Control.Else
+			Gui.frmCRM.[V.Local.sControl].Export(V.Local.sFileExport,"xlsx")
+			F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("{0}\GAB_4167_{1}_Export.csv",V.Caller.LocalGssTempDir,V.Local.sControl,V.Local.sFileExport)
+		F.Intrinsic.File.IsFileLocked(V.Local.sFileExport,V.Local.bFileLocked)
+		F.Intrinsic.Control.If(V.Local.bFileLocked)
+			F.Intrinsic.String.Build("File is already open. Please close and export again.{0}File: {1}",V.Ambient.NewLine,V.Local.sFileExport,V.Local.sMsg)
+			F.Intrinsic.UI.Msgbox(V.Local.sMsg,"File In Use")
+		F.Intrinsic.Control.Else
+			Gui.frmCRM.[V.Local.sControl].Export(V.Local.sFileExport,"csv")
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.MenuClickExport.End
+
+Program.Sub.MenuClickResetColumns.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	F.Intrinsic.Control.SelectCase(V.Args.MenuName)
+		F.Intrinsic.Control.Case("CTXOPP")
+			F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"GVOPP",6335,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,"")
+		F.Intrinsic.Control.Case("CTXEVENTS")
+			F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"GVEVENTS",6335,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,"")
+		F.Intrinsic.Control.Case("CTXNOTES")
+			F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"GVNOTES",6335,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,"")
+	F.Intrinsic.Control.EndSelect
+	
+	V.Global.bLoadData.Set(False)
+	F.Intrinsic.Control.CallSub(cmdRefresh_Click)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.MenuClickResetColumns.End
+
+Program.Sub.cmdRefresh_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	F.Intrinsic.Control.If(V.Global.bLoadData)
+		F.Intrinsic.Control.CallSub(Serialize)
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.BlockEvents
+	Gui.frmCRM.lblStatus.Caption("Refreshing Dashboard...")
+	Gui.frmCRM.lblStatus.Visible(True)
+	Gui.frmCRM.progressBar1.Visible(True)
+	Gui.frmCRM.progressBar1.Value(20)
+
+	Gui.frmCRM.tabCRM.SetTab(V.Screen.frmCRM!tabCRM.Tab)
+	Gui.frmCRM.lblStatus.Caption("Refreshing Dashboard Opportunities (1 of 3)")
+	F.Intrinsic.Control.CallSub(load_opp)
+	F.Intrinsic.Control.CallSub(LoadCharts)
+	Gui.frmCRM.progressBar1.Value(40)
+	Gui.frmCRM.lblStatus.Caption("Refreshing Dashboard Events (2 of 3)")
+	F.Intrinsic.Control.CallSub(load_events)
+	Gui.frmCRM.progressBar1.Value(60)
+	Gui.frmCRM.lblStatus.Caption("Refreshing Dashboard Notes (3 of 3)")
+	F.Intrinsic.Control.CallSub(load_notes)
+	Gui.frmCRM.progressBar1.Value(80)
+	Gui.frmCRM.progressBar1.Value(100)
+
+	Gui.frmCRM.lblStatus.Caption("Complete")
+	Gui.frmCRM.lblStatus.Visible(False)
+	Gui.frmCRM.progressBar1.Visible(False)
+	F.Intrinsic.Control.UnBlockEvents
+	F.Intrinsic.Control.CallSub(Deserialize)
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdRefresh_Click.End
+
+Program.Sub.Load_Opp.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	v.Local.sSQL.Declare
+	
+	F.Intrinsic.Control.If(V.DataTable.dtOpp.Exists)
+		F.Data.DataTable.Close("dtOpp")
+	F.Intrinsic.Control.EndIf
+	
+	V.Global.bLoadData.Set(True)
+		
+	
+	'Create DataTable
+	F.Intrinsic.Control.If(V.Global.bIsCRMsupervisor)
+		'IF CRM SUPERVISOR SHOW ALL		
+		V.Local.sSQL.Set("SELECT CM.OID, CM.COMPID,CASE WHEN COMPTYPE = 10 THEN VVM.NAME_VENDOR WHEN COMPTYPE = 15 THEN VCM.NAME_CUSTOMER WHEN COMPTYPE = 18 THEN PM.NAME_PROSPECT WHEN COMPTYPE = 19 THEN PM.NAME_PROSPECT END,CASE WHEN CM.COMPTYPE = 10 THEN 'V' WHEN CM.COMPTYPE = 15 THEN 'C' WHEN CM.COMPTYPE = 18 THEN 'P' WHEN CM.COMPTYPE = 19 THEN 'S' END, CM.ODESC, CTYPE.VALUE, COG.OGDESC, CT.NAME, CM.SALESORDER, CM.QUOTE, SP.NAME, CM.INT_ASSIGN, CSTAT.VALUE, COF.VALUE, COP.VALUE, COL.VALUE, CM.OCREATEDATE, CM.OPROJCLOSEDATE, CM.OCLOSEDATE, CR.VALUE AS CLOSEREASON, CM.OREVENUE, COMPTYPE FROM CRM_OPP_MASTER CM LEFT JOIN V_CUSTOMER_MASTER VCM ON CM.COMPID = VCM.CUSTOMER LEFT JOIN PROSPECT_MASTER PM ON CM.COMPID = PM.PROSPECT LEFT JOIN V_VENDOR_MASTER VVM ON CM.COMPID = VVM.VENDOR LEFT JOIN CRM_OPP_TYPE CTYPE ON CM.OTYPE = CTYPE.SEQ LEFT JOIN CRM_OPPGROUPING COG ON CM.OGID = COG.OGID LEFT JOIN CRM_OPP_STATUS CSTAT ON CM.OSTATUS = CSTAT.SEQ LEFT JOIN CRM_OPP_FUNNEL COF ON CM.OFUNNEL = COF.SEQ LEFT JOIN CRM_OPP_PROB COP ON CM.OPROB = COP.ID AND CM.OFUNNEL = COP.FUNNELID LEFT JOIN CRM_OPP_LEADSOURCE COL ON CM.OLEADSOURCE = COL.SEQ LEFT JOIN SALESPERSONS SP ON CM.SALESPERSON = SP.ID LEFT JOIN CONTACT CT ON CM.COMPID = CT.CUST AND CM.CID = CT.ALT_ID LEFT JOIN CRM_OPP_CLSRSN CR ON CM.OCLOSEREASON = CR.SEQ ORDER BY CM.COMPID;")
+	F.Intrinsic.Control.Else
+		'IF NOT CRM SUPERVISOR THEN ONLY SHOW CUSTOMERS THAT USER HAS SECURITY TO SEE		
+		f.Intrinsic.String.Build("SELECT CM.OID, CM.COMPID,CASE WHEN COMPTYPE = 10 THEN VVM.NAME_VENDOR WHEN COMPTYPE = 15 THEN VCM.NAME_CUSTOMER WHEN COMPTYPE = 18 THEN PM.NAME_PROSPECT WHEN COMPTYPE = 19 THEN PM.NAME_PROSPECT END,CASE WHEN CM.COMPTYPE = 10 THEN 'V' WHEN CM.COMPTYPE = 15 THEN 'C' WHEN CM.COMPTYPE = 18 THEN 'P' WHEN CM.COMPTYPE = 19 THEN 'S' END, CM.ODESC, CTYPE.VALUE, COG.OGDESC, CT.NAME, CM.SALESORDER, CM.QUOTE, SP.NAME, CM.INT_ASSIGN, CSTAT.VALUE, COF.VALUE, COP.VALUE, COL.VALUE, CM.OCREATEDATE, CM.OPROJCLOSEDATE, CM.OCLOSEDATE, CR.VALUE AS CLOSEREASON, CM.OREVENUE, COMPTYPE FROM CRM_OPP_MASTER CM LEFT JOIN V_CUSTOMER_MASTER VCM ON CM.COMPID = VCM.CUSTOMER LEFT JOIN PROSPECT_MASTER PM ON CM.COMPID = PM.PROSPECT LEFT JOIN V_VENDOR_MASTER VVM ON CM.COMPID = VVM.VENDOR LEFT JOIN CRM_OPP_TYPE CTYPE ON CM.OTYPE = CTYPE.SEQ LEFT JOIN CRM_OPPGROUPING COG ON CM.OGID = COG.OGID LEFT JOIN CRM_OPP_STATUS CSTAT ON CM.OSTATUS = CSTAT.SEQ LEFT JOIN CRM_OPP_FUNNEL COF ON CM.OFUNNEL = COF.SEQ LEFT JOIN CRM_OPP_PROB COP ON CM.OPROB = COP.ID AND CM.OFUNNEL = COP.FUNNELID LEFT JOIN CRM_OPP_LEADSOURCE COL ON CM.OLEADSOURCE = COL.SEQ LEFT JOIN SALESPERSONS SP ON CM.SALESPERSON = SP.ID LEFT JOIN CONTACT CT ON CM.COMPID = CT.CUST AND CM.CID = CT.ALT_ID LEFT JOIN CRM_OPP_CLSRSN CR ON CM.OCLOSEREASON = CR.SEQ WHERE (VCM.CUSTOMER IN (SELECT CUSTOMER FROM V_CUSTOMER_MASTER WHERE (ASSGN_USR_GRP IN ({0}) AND CRM_RES_LEV = '2') OR (ASSGN_USR_GRP = '{1}' AND CRM_RES_LEV = '1') OR (CRM_RES_LEV = '0')) OR PM.PROSPECT IN (SELECT PROSPECT FROM V_PROSPECT_MASTER WHERE (ASSGN_USR_GRP IN ({0}) AND CRM_RES_LEV = '2') OR (ASSGN_USR_GRP = '{1}' AND CRM_RES_LEV = '1') OR (CRM_RES_LEV = '0')) OR VVM.VENDOR IN (SELECT VENDOR FROM V_VENDOR_MASTER)) ORDER BY CM.COMPID;",v.Global.sUserGroups,v.Caller.User,v.Local.sSQL)
+	F.Intrinsic.Control.EndIf	
+		
+	'Create DataTable
+	F.Data.DataTable.CreateFromSQL("dtOpp","con",v.Local.sSQL,True)
+	
+	F.Intrinsic.Control.CallSub(LoadEntryColumns)
+	
+	'Create GridView
+	Gui.frmCRM.GsGCOpp.AddGridViewFromDataTable("gvOpp","dtOpp")
+	'Suspend Layout
+	Gui.frmCRM.GsGCOpp.SuspendLayout()
+	'Setup Grid Properties	
+	
+	'Gui.frmCRM.GsGCOpp.SetGridViewProperty("gvOpp","OptionBehaviorEditable",False)
+	Gui.frmCRM.GsGCOpp.SetGridViewProperty("gvOpp","MultiSelect",True)
+	Gui.frmCRM.GsGCOpp.SetGridViewProperty("gvOpp","AllowFilter",True)
+	Gui.frmCRM.GsGCOpp.SetGridViewProperty("gvOpp","OptionsViewShowGroupPanel",True)
+	Gui.frmCRM.GsGCOpp.SetGridViewProperty("gvOpp","EnableAppearanceOddRow",True)
+	Gui.frmCRM.GsGCOpp.SetGridViewProperty("gvOpp","OptionsViewColumnAutoWidth",False)
+	'Setup Column Properties
+	'Visible
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","COMPTYPE","Visible",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","FINAL_PROJECTED_STRAPS","Visible",False)
+	
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","FINAL_PROJECTED_STRAPS","AllowShowHide",False)
+	
+	'Captions
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","COMPID","Caption","Customer")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPR_1","Caption","Customer Name")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPR_2","Caption","C/P/S/V")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","ODESC","Caption","Description")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE","Caption","Type")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OGDESC","Caption","Group")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","NAME","Caption","Contact")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","SALESORDER","Caption","Sales Orders")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","QUOTE","Caption","Quotes")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OREVENUE","Caption","Revenue ")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","NAME1","Caption","Sales Person")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","INT_ASSIGN","Caption","Interal Assignment")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE1","Caption","Status")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE2","Caption","Funnel")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE3","Caption","Probability")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE4","Caption","Leadsource")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OCREATEDATE","Caption","Create Date")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OPROJCLOSEDATE","Caption","Proj. Closed Date")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OCLOSEDATE","Caption","Closed Date")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","CLOSEREASON","Caption","Closed Reason")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OID","Caption","Oppurtunity ID")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","BED_COUNT","Caption","Bed Count")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","DAILY_CENSUS","Caption","Average Daily Census")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","AVERAGE_LENGTH","Caption","Average Length of Stay")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PERCENT_QUALIFIED","Caption","% of Patients Qualified")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PRICE","Caption","Price")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_STRAP_SALES","Caption","Actual Monthly Strap Sales")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","ANNUAL_QUALIFIED_PATIENTS","Caption","Annual Qualified Patients")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_STRAPS_CALCULATED","Caption","Monthly Projected Straps")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPECTED_REVENUE","Caption","Monthly Projected Revenue")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_CONTROLLERS","Caption","Monthly Projected Controllers")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_CHARGERS","Caption","Monthly Projected Chargers")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PROJECTED_STRAPS","Caption","Entered Projected Straps")		
+	
+	'CellForeColor
+	f.Intrinsic.Control.If(v.Global.bEditCRM,=,True,or,v.Global.bViewCRM,=,True)
+		Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","COMPID","CellForeColor","Blue")
+	f.Intrinsic.Control.EndIf	
+	f.Intrinsic.Control.If(v.Global.bEditSO,=,True,or,v.Global.bViewSO,=,True)
+		Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","SALESORDER","CellForeColor","Blue")		
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.If(v.Global.bEditQuote,=,True,or,v.Global.bViewQuote,=,True)
+		Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","QUOTE","CellForeColor","Blue")
+	f.Intrinsic.Control.EndIf		
+	'MinWidth
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","COMPID","MinWidth","35")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPR_1","MinWidth","200")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPR_2","MinWidth","50")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","ODESC","MinWidth","400")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE","MinWidth","150")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OGDESC","MinWidth","225")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","NAME","MinWidth","100")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","SALESORDER","MinWidth","95")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","QUOTE","MinWidth","75")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OREVENUE","MinWidth","75")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","NAME1","MinWidth","150")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","INT_ASSIGN","MinWidth","125")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE1","MinWidth","125")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE2","MinWidth","125")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE3","MinWidth","125")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE4","MinWidth","125")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OCREATEDATE","MinWidth","75")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OPROJCLOSEDATE","MinWidth","105")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OCLOSEDATE","MinWidth","75")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","CLOSEREASON","MinWidth","145")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OID","MinWidth",60)		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","BED_COUNT","MinWidth",70)		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","DAILY_CENSUS","MinWidth",70)		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","AVERAGE_LENGTH","MinWidth",70)		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PERCENT_QUALIFIED","MinWidth",70)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PRICE","MinWidth",70)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_STRAP_SALES","MinWidth",70)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","ANNUAL_QUALIFIED_PATIENTS","MinWidth",70)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_STRAPS_CALCULATED","MinWidth",70)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PROJECTED_STRAPS","MinWidth",70)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPECTED_REVENUE","MinWidth",70)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_CONTROLLERS","MinWidth",70)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_CHARGERS","MinWidth",70)
+	
+	'Fixed
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","COMPID","Fixed","Left")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPR_1","Fixed","Left")
+	'HeaderFontBold
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","COMPID","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPR_1","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPR_2","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","ODESC","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OGDESC","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","NAME","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","SALESORDER","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","QUOTE","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OREVENUE","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","NAME1","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","INT_ASSIGN","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE1","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE2","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE3","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE4","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OCREATEDATE","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OPROJCLOSEDATE","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OCLOSEDATE","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","CLOSEREASON","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OID","HeaderFontBold",True)		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","BED_COUNT","HeaderFontBold",True)		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","DAILY_CENSUS","HeaderFontBold",True)		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","AVERAGE_LENGTH","HeaderFontBold",True)		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PRICE","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PERCENT_QUALIFIED","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_STRAP_SALES","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","ANNUAL_QUALIFIED_PATIENTS","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_STRAPS_CALCULATED","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PROJECTED_STRAPS","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPECTED_REVENUE","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_CONTROLLERS","HeaderFontBold",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_CHARGERS","HeaderFontBold",True)
+	
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","BED_COUNT","ReadOnly",False)		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","DAILY_CENSUS","ReadOnly",False)		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","AVERAGE_LENGTH","ReadOnly",False)		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PERCENT_QUALIFIED","ReadOnly",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","COMPID","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPR_1","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPR_2","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","ODESC","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OGDESC","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","NAME","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","SALESORDER","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","QUOTE","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OREVENUE","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","NAME1","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","INT_ASSIGN","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE1","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE2","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE3","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE4","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OCREATEDATE","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OPROJCLOSEDATE","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OCLOSEDATE","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","CLOSEREASON","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OID","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PRICE","ReadOnly",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_STRAP_SALES","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","ANNUAL_QUALIFIED_PATIENTS","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_STRAPS_CALCULATED","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PROJECTED_STRAPS","ReadOnly",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPECTED_REVENUE","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_CONTROLLERS","ReadOnly",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_CHARGERS","ReadOnly",True)
+	
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","BED_COUNT","AllowEdit",True)		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","DAILY_CENSUS","AllowEdit",True)		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","AVERAGE_LENGTH","AllowEdit",True)		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PERCENT_QUALIFIED","AllowEdit",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","COMPID","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPR_1","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPR_2","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","ODESC","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OGDESC","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","NAME","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","SALESORDER","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","QUOTE","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OREVENUE","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","NAME1","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","INT_ASSIGN","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE1","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE2","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE3","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE4","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OCREATEDATE","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OPROJCLOSEDATE","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OCLOSEDATE","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","CLOSEREASON","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OID","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PRICE","AllowEdit",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_STRAP_SALES","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","ANNUAL_QUALIFIED_PATIENTS","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_STRAPS_CALCULATED","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PROJECTED_STRAPS","AllowEdit",True)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPECTED_REVENUE","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_CONTROLLERS","AllowEdit",False)
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_CHARGERS","AllowEdit",False)
+	
+	'HeaderHAlignment
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","COMPID","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPR_1","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPR_2","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","ODESC","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OGDESC","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","NAME","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","SALESORDER","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","QUOTE","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OREVENUE","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","NAME1","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","INT_ASSIGN","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE1","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE2","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE3","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE4","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OCREATEDATE","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OPROJCLOSEDATE","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OCLOSEDATE","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","CLOSEREASON","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OID","HeaderHAlignment","Center")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","BED_COUNT","HeaderHAlignment","Center")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","DAILY_CENSUS","HeaderHAlignment","Center")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","AVERAGE_LENGTH","HeaderHAlignment","Center")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PERCENT_QUALIFIED","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PRICE","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_STRAP_SALES","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","ANNUAL_QUALIFIED_PATIENTS","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_STRAPS_CALCULATED","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PROJECTED_STRAPS","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPECTED_REVENUE","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_CONTROLLERS","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_CHARGERS","HeaderHAlignment","Center")
+	
+	'CellHAlignment
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPR_2","CellHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OCREATEDATE","CellHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OPROJCLOSEDATE","CellHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OCLOSEDATE","CellHAlignment","Center")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OREVENUE","CellHAlignment","Far")
+	'CellTrimming
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","COMPID","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPR_1","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPR_2","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","ODESC","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OGDESC","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","NAME","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","SALESORDER","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","QUOTE","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OREVENUE","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","NAME1","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","INT_ASSIGN","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE1","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE2","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE3","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","VALUE4","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OCREATEDATE","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OPROJCLOSEDATE","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OCLOSEDATE","CellTrimming","Character")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","CLOSEREASON","CellTrimming","Character")
+	'DisplayCustomNumeric
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OREVENUE","DisplayCustomNumeric","$#######.00")	
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","BED_COUNT","DisplayCustomNumeric","#,##0")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","DAILY_CENSUS","DisplayCustomNumeric","#,##0")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","AVERAGE_LENGTH","DisplayCustomNumeric","#,##0")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PERCENT_QUALIFIED","DisplayCustomNumeric","#,##0.00")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PRICE","DisplayCustomNumeric","$#,##0.00")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_STRAP_SALES","DisplayCustomNumeric","#,##0")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","ANNUAL_QUALIFIED_PATIENTS","DisplayCustomNumeric","#,##0")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_STRAPS_CALCULATED","DisplayCustomNumeric","#,##0")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PROJECTED_STRAPS","DisplayCustomNumeric","#,##0")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","EXPECTED_REVENUE","DisplayCustomNumeric","$#,##0.00")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_CONTROLLERS","DisplayCustomNumeric","#,##0")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","MONTHLY_PROJECTED_CHARGERS","DisplayCustomNumeric","#,##0")
+	
+	'DisplayCustomDatetime
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OCREATEDATE","DisplayCustomDatetime","d")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OPROJCLOSEDATE","DisplayCustomDatetime","d")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OCLOSEDATE","DisplayCustomDatetime","d")
+	
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","BED_COUNT","CellBackColor","LightYellow")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","DAILY_CENSUS","CellBackColor","LightYellow")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","AVERAGE_LENGTH","CellBackColor","LightYellow")		
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PERCENT_QUALIFIED","CellBackColor","LightYellow")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PRICE","CellBackColor","LightYellow")
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","PROJECTED_STRAPS","CellBackColor","LightYellow")
+	
+	Gui.frmCRM.GsGCOpp.SetColumnProperty("gvOpp","OID","Visible","False")
+	
+	GUI.frmCRM.GsGCOpp.AddSummaryItem("gvOpp", "MONTHLY_PROJECTED_STRAPS_CALCULATED", "sum1", "SUM", "", "", "#,##0")
+	GUI.frmCRM.GsGCOpp.AddSummaryItem("gvOpp", "PROJECTED_STRAPS", "sum2", "SUM", "", "", "#,##0")
+	GUI.frmCRM.GsGCOpp.AddSummaryItem("gvOpp", "MONTHLY_PROJECTED_CONTROLLERS", "sum3", "SUM", "", "", "#,##0")
+	GUI.frmCRM.GsGCOpp.AddSummaryItem("gvOpp", "MONTHLY_PROJECTED_CHARGERS", "sum4", "SUM", "", "", "#,##0")
+	
+	'Resume Layout
+	Gui.frmCRM.GsGCOpp.ResumeLayout()
+	'Set MainView with GridView
+	Gui.frmCRM.GsGCOpp.MainView("gvOpp")
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndTry
+Program.Sub.Load_Opp.End
+
+Program.Sub.LoadEntryColumns.Start
+F.Intrinsic.Control.Try
+
+V.Local.sError.Declare(String)
+
+F.Data.DataTable.CreateFromSQL("dtEntryColumns", "Con", "select OID, IsNull(BED_COUNT, 0) BED_COUNT, IsNull(DAILY_CENSUS, 0) DAILY_CENSUS, IsNull(AVERAGE_LENGTH, 0) AVERAGE_LENGTH, IsNull(PERCENT_QUALIFIED, 0) PERCENT_QUALIFIED, IsNull(Price, 0) PRICE, IsNull(PROJECTED_STRAPS, 0) PROJECTED_STRAPS from GCG_6335_FIELDS")
+
+F.Data.Dictionary.CreateFromDataTable("dictTemp", "dtEntryColumns", "OID", "BED_COUNT")
+F.Data.Dictionary.SetDefaultReturn("dictTemp", 0)
+F.Data.DataTable.AddColumn("dtOpp", "BED_COUNT", "Long", 0)
+F.Data.DataTable.FillFromDictionary("dtOpp", "dictTemp", "OID", "BED_COUNT")
+F.Data.Dictionary.Close("dictTemp")
+
+F.Data.Dictionary.CreateFromDataTable("dictTemp", "dtEntryColumns", "OID", "DAILY_CENSUS")
+F.Data.Dictionary.SetDefaultReturn("dictTemp", 0)
+F.Data.DataTable.AddColumn("dtOpp", "DAILY_CENSUS", "Long", 0)
+F.Data.DataTable.FillFromDictionary("dtOpp", "dictTemp", "OID", "DAILY_CENSUS")
+F.Data.Dictionary.Close("dictTemp")
+
+F.Data.Dictionary.CreateFromDataTable("dictTemp", "dtEntryColumns", "OID", "AVERAGE_LENGTH")
+F.Data.Dictionary.SetDefaultReturn("dictTemp", 0)
+F.Data.DataTable.AddColumn("dtOpp", "AVERAGE_LENGTH", "Long", 0)
+F.Data.DataTable.FillFromDictionary("dtOpp", "dictTemp", "OID", "AVERAGE_LENGTH")
+F.Data.Dictionary.Close("dictTemp")
+
+F.Data.Dictionary.CreateFromDataTable("dictTemp", "dtEntryColumns", "OID", "PERCENT_QUALIFIED")
+F.Data.Dictionary.SetDefaultReturn("dictTemp", 0)
+F.Data.DataTable.AddColumn("dtOpp", "PERCENT_QUALIFIED", "Float", 0)
+F.Data.DataTable.FillFromDictionary("dtOpp", "dictTemp", "OID", "PERCENT_QUALIFIED")
+F.Data.Dictionary.Close("dictTemp")
+
+F.Data.Dictionary.CreateFromDataTable("dictTemp", "dtEntryColumns", "OID", "PRICE")
+F.Data.Dictionary.SetDefaultReturn("dictTemp", 0)
+F.Data.DataTable.AddColumn("dtOpp", "PRICE", "Float", 0)
+F.Data.DataTable.FillFromDictionary("dtOpp", "dictTemp", "OID", "PRICE")
+F.Data.Dictionary.Close("dictTemp")
+
+F.Data.Dictionary.CreateFromDataTable("dictTemp", "dtEntryColumns", "OID", "PROJECTED_STRAPS")
+F.Data.Dictionary.SetDefaultReturn("dictTemp", 0)
+F.Data.DataTable.AddColumn("dtOpp", "PROJECTED_STRAPS", "Float", 0)
+F.Data.DataTable.FillFromDictionary("dtOpp", "dictTemp", "OID", "PROJECTED_STRAPS")
+F.Data.Dictionary.Close("dictTemp")
+
+F.Data.DataTable.Close("dtEntryColumns")
+
+'now load monthly strap sales
+F.Data.Dictionary.CreateFromSQL("dictTemp", "Con", "select CUSTOMER, ROUND(SUM(QTY_SHIPPED) / 12, 0) from V_ORDER_HIST_LINE where DATE_SHIPPED >= DATEADD(YEAR, -1, CURDATE()) and PART in (select PART from V_INVENTORY_MSTR where CODE_SORT = 'STRAP') group by CUSTOMER")
+F.Data.Dictionary.SetDefaultReturn("dictTemp", 0)
+F.Data.DataTable.AddColumn("dtOpp", "MONTHLY_STRAP_SALES", "Long", 0)
+F.Data.DataTable.FillFromDictionary("dtOpp", "dictTemp", "OID", "MONTHLY_STRAP_SALES")
+F.Data.Dictionary.Close("dictTemp")
+
+F.Data.DataTable.AddExpressionColumn("dtOpp", "ANNUAL_QUALIFIED_PATIENTS", "Float", "IIF(IsNull([AVERAGE_LENGTH], 0) <> 0, ([DAILY_CENSUS] * ([PERCENT_QUALIFIED] / 100) * 365) / [AVERAGE_LENGTH], 0)")
+F.Data.DataTable.AddExpressionColumn("dtOpp", "MONTHLY_PROJECTED_STRAPS_CALCULATED", "Float", "([ANNUAL_QUALIFIED_PATIENTS] * 2) / 12")
+F.Data.DataTable.AddExpressionColumn("dtOpp", "FINAL_PROJECTED_STRAPS", "Float", "IIF(IsNull([PROJECTED_STRAPS], 0) = 0, [MONTHLY_PROJECTED_STRAPS_CALCULATED], [PROJECTED_STRAPS])")
+F.Data.DataTable.AddExpressionColumn("dtOpp", "EXPECTED_REVENUE", "Float", "([FINAL_PROJECTED_STRAPS] * [PRICE])")
+F.Data.DataTable.AddExpressionColumn("dtOpp", "MONTHLY_PROJECTED_CONTROLLERS", "Float", "([BED_COUNT] * 2) / 12")
+F.Data.DataTable.AddExpressionColumn("dtOpp", "MONTHLY_PROJECTED_CHARGERS", "Float", "[BED_COUNT]/ 12")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadEntryColumns.End
+
+Program.Sub.LoadCharts.Start
+F.Intrinsic.Control.Try
+
+V.Local.sError.Declare(String)
+V.Local.sFilter.Declare(String)
+V.Local.sPieChartData.Declare(String)
+V.Local.iCounter.Declare(Long)
+V.Local.iStraps.Declare(Long)
+V.Local.iControllers.Declare(Long)
+V.Local.iChargers.Declare(Long)
+V.Local.sRevenueChartData.Declare(String, "None*!*0")
+V.Local.sFormat.Declare(String)
+V.Local.sFormat2.Declare(String)
+V.Local.sFormat3.Declare(String)
+V.Local.sVolumeDataEstimated.Declare(String, "None*!*0")
+V.Local.sVolumeDataActual.Declare(String, "None*!*0")
+
+F.Data.DataTable.AddExpressionColumn("dtOpp", "ANNUAL_QUALIFIED_PATIENTS2", "Float", "IIF(IsNull([AVERAGE_LENGTH], 0) <> 0, ([DAILY_CENSUS] * ([PERCENT_QUALIFIED] / 100) * 365) / [AVERAGE_LENGTH], 0)")
+F.Data.DataTable.AddExpressionColumn("dtOpp", "MONTHLY_PROJECTED_STRAPS_CALCULATED2", "Float", "([ANNUAL_QUALIFIED_PATIENTS2] * 2) / 12")
+F.Data.DataTable.AddExpressionColumn("dtOpp", "FINAL_PROJECTED_STRAPS2", "Float", "IIF(IsNull([PROJECTED_STRAPS], 0) = 0, [MONTHLY_PROJECTED_STRAPS_CALCULATED2], [PROJECTED_STRAPS])")
+F.Data.DataTable.AddExpressionColumn("dtOpp", "EXPECTED_REVENUE2", "Float", "([FINAL_PROJECTED_STRAPS2] * [PRICE])")
+F.Data.DataTable.AddExpressionColumn("dtOpp", "MONTHLY_PROJECTED_CONTROLLERS2", "Float", "([BED_COUNT] * 2) / 12")
+F.Data.DataTable.AddExpressionColumn("dtOpp", "MONTHLY_PROJECTED_CHARGERS2", "Float", "[BED_COUNT]/ 12")
+
+GUI.frmCRM.GsGCOpp.FilterToWhereClause("gvOpp", V.Local.sFilter)
+F.Data.DataView.Create("dtOpp", "dvOpp", 22, V.Local.sFilter, "")
+F.Intrinsic.Control.For(V.Local.iCounter, 0, V.DataView.dtOpp!dvOpp.RowCount--, 1)
+	F.Intrinsic.Control.If(V.Local.iCounter, =, 0)
+		F.Intrinsic.String.Format(V.DataView.dtOpp!dvOpp(V.Local.iCounter).EXPECTED_REVENUE2!FieldValFloat, "0.00", V.Local.sFormat)
+		F.Intrinsic.String.Build("{0}*!*{1}", V.DataView.dtOpp!dvOpp(V.Local.iCounter).COMPID!FieldValTrim, V.Local.sFormat, V.Local.sRevenueChartData)
+		F.Intrinsic.String.Build("{0}*!*{1}", V.DataView.dtOpp!dvOpp(V.Local.iCounter).COMPID!FieldValTrim, V.DataView.dtOpp!dvOpp(V.Local.iCounter).MONTHLY_STRAP_SALES!FieldValLong, V.Local.sVolumeDataActual)
+		F.Intrinsic.String.Build("{0}*!*{1}", V.DataView.dtOpp!dvOpp(V.Local.iCounter).COMPID!FieldValTrim, V.DataView.dtOpp!dvOpp(V.Local.iCounter).FINAL_PROJECTED_STRAPS2!FieldValLong, V.Local.sVolumeDataEstimated)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Format(V.DataView.dtOpp!dvOpp(V.Local.iCounter).EXPECTED_REVENUE2!FieldValFloat, "0.00", V.Local.sFormat)
+		F.Intrinsic.String.Build("{2}!*!{0}*!*{1}", V.DataView.dtOpp!dvOpp(V.Local.iCounter).COMPID!FieldValTrim, V.Local.sFormat, V.Local.sRevenueChartData, V.Local.sRevenueChartData)
+		F.Intrinsic.String.Build("{2}!*!{0}*!*{1}", V.DataView.dtOpp!dvOpp(V.Local.iCounter).COMPID!FieldValTrim, V.DataView.dtOpp!dvOpp(V.Local.iCounter).MONTHLY_STRAP_SALES!FieldValLong, V.Local.sVolumeDataActual, V.Local.sVolumeDataActual)
+		F.Intrinsic.String.Build("{2}!*!{0}*!*{1}", V.DataView.dtOpp!dvOpp(V.Local.iCounter).COMPID!FieldValTrim, V.DataView.dtOpp!dvOpp(V.Local.iCounter).FINAL_PROJECTED_STRAPS2!FieldValLong, V.Local.sVolumeDataEstimated, V.Local.sVolumeDataEstimated)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iCounter)
+F.Data.DataView.Close("dtOpp", "dvOpp")
+
+'load pie chart
+F.Data.DataTable.Compute("dtOpp", "SUM(FINAL_PROJECTED_STRAPS2)", V.Local.sFilter, V.Local.iStraps)
+F.Data.DataTable.Compute("dtOpp", "SUM(MONTHLY_PROJECTED_CONTROLLERS2)", V.Local.sFilter, V.Local.iControllers)
+F.Data.DataTable.Compute("dtOpp", "SUM(MONTHLY_PROJECTED_CHARGERS2)", V.Local.sFilter, V.Local.iChargers)
+F.Intrinsic.String.Build("Straps*!*Controllers*!*Chargers!*!{0}*!*{1}*!*{2}", V.Local.iStraps, V.Local.iControllers, V.Local.iChargers, V.Local.sPieChartData)
+
+GUI.frmCRM.gsChartMonthlyHardware.ClearChart
+GUI.frmCRM.gsChartMonthlyHardware.CreatePieChart("Monthly Projected Hardware", "S1", V.Local.sPieChartData)
+GUI.frmCRM.gsChartMonthlyHardware.SetChartProperty("LEGEND", "", "Visible", -1, False)
+
+GUI.frmCRM.gsChartMonthlyRevenue.ClearChart
+'GUI.frmCRM.gsChartMonthlyRevenue.CreateVertBarChart("Monthly Projected Revenue", "S1", V.Local.sRevenueChartData, False)
+GUI.frmCRM.gsChartMonthlyRevenue.CreateHorzBarChart("Monthly Projected Revenue", "S1", V.Local.sRevenueChartData, False)
+
+GUI.frmCRM.gsChartMonthlyVolume.ClearChart
+GUI.frmCRM.gsChartMonthlyVolume.CreateVertBarChart("Monthly Strap Volume", "Actual Monthly Strap Sale", V.Local.sVolumeDataActual, False)
+GUI.frmCRM.gsChartMonthlyVolume.AddSeriesToBarChart("Projected Monthly Strap Sale", V.Local.sVolumeDataEstimated)
+
+F.Data.DataTable.RemoveColumn("dtOpp", "MONTHLY_PROJECTED_CHARGERS2")
+F.Data.DataTable.RemoveColumn("dtOpp", "MONTHLY_PROJECTED_CONTROLLERS2")
+F.Data.DataTable.RemoveColumn("dtOpp", "EXPECTED_REVENUE2")
+F.Data.DataTable.RemoveColumn("dtOpp", "FINAL_PROJECTED_STRAPS2")
+F.Data.DataTable.RemoveColumn("dtOpp", "MONTHLY_PROJECTED_STRAPS_CALCULATED2")
+F.Data.DataTable.RemoveColumn("dtOpp", "ANNUAL_QUALIFIED_PATIENTS2")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadCharts.End
+
+Program.Sub.gsgcOpp_RowCellClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sParams.Declare(String)
+	V.Local.sCustomer.Declare(String)
+	V.Local.sSO.Declare(String)
+	V.Local.sQte.Declare(String)
+	V.Local.sRet.Declare(String)
+	V.Local.iRet.Declare(Long)
+	V.Local.iType.Declare(Long)
+	V.Local.iHandle.Declare(Long)
+	V.Local.sFile.Declare(String)	
+	
+	'Mode 9: View Mode with the company tab selected by default
+	'Mode 1: Edit Mode with the company tab selected by default
+	
+	f.Intrinsic.Control.BlockEvents
+	F.Intrinsic.Control.If(V.Args.Button,=,"Left")
+		Gui.frmCRM.GsGCOpp.GetCellValueByColumnName("gvOpp","COMPID",V.Args.RowIndex,V.Local.sCustomer)
+		Gui.frmCRM.GsGCOpp.GetCellValueByColumnName("gvOpp","COMPTYPE",V.Args.RowIndex,V.Local.iType)
+		Gui.frmCRM.GsGCOpp.GetCellValueByColumnName("gvOpp","SALESORDER",V.Args.RowIndex,V.Local.sSO)
+		Gui.frmCRM.GsGCOpp.GetCellValueByColumnName("gvOpp","QUOTE",V.Args.RowIndex,V.Local.sQte)
+
+		F.Intrinsic.Control.If(V.Screen.frmCRM!optView.Value,=,True)
+			F.Intrinsic.Control.SelectCase(V.Args.Column)
+				F.Intrinsic.Control.Case("COMPID")					
+					f.Intrinsic.Control.If(v.Global.bViewCRM)
+						F.Intrinsic.String.Build("MODE::9*!*COMPANY-NUMBER::{0}*!*COMPANY-TYPE::{1}",V.Local.sCustomer,V.Local.iType,V.Local.sParams)					
+						F.Global.CRM.Invoke(V.Local.sParams,V.Local.iHandle)
+					f.Intrinsic.Control.EndIf					
+				F.Intrinsic.Control.Case("SALESORDER")					
+					f.Intrinsic.Control.If(v.Global.bViewSO)
+						F.Intrinsic.String.Build("{0}!*!V!*!{1}",V.Local.sSO,V.Local.sCustomer,V.Local.sParams)
+						F.Global.General.CallWrapperSync(200000,V.Local.sParams)
+					f.Intrinsic.Control.EndIf					
+				F.Intrinsic.Control.Case("QUOTE")					
+					f.Intrinsic.Control.If(v.Global.bViewQuote)
+						F.Intrinsic.String.Build("{0}!*!V",V.Local.sQte,V.Local.sParams)
+						F.Global.General.CallWrapperSync(251000,V.Local.sParams)
+					f.Intrinsic.Control.EndIf					
+			F.Intrinsic.Control.EndSelect
+		F.Intrinsic.Control.ElseIf(V.Screen.frmCRM!optView.Value,=,False)				
+			F.Intrinsic.Control.SelectCase(V.Args.Column)
+				F.Intrinsic.Control.Case("COMPID")									
+					f.Intrinsic.Control.If(v.Global.bEditCRM)
+						F.Intrinsic.String.Build("MODE::1*!*COMPANY-NUMBER::{0}*!*COMPANY-TYPE::{1}",V.Local.sCustomer,V.Local.iType,V.Local.sParams)
+						F.Global.CRM.Invoke(V.Local.sParams,V.Local.iHandle)
+					f.Intrinsic.Control.Else						
+						f.Intrinsic.Control.If(v.Global.bViewCRM)
+							F.Intrinsic.String.Build("MODE::9*!*COMPANY-NUMBER::{0}*!*COMPANY-TYPE::{1}",V.Local.sCustomer,V.Local.iType,V.Local.sParams)					
+							F.Global.CRM.Invoke(V.Local.sParams,V.Local.iHandle)
+						f.Intrinsic.Control.EndIf
+					f.Intrinsic.Control.EndIf					
+				F.Intrinsic.Control.Case("SALESORDER")					
+					f.Intrinsic.Control.If(v.Global.bEditSO)
+						F.Intrinsic.String.Build("{0}!*!O!*!{1}",V.Local.sSO,V.Local.sCustomer,V.Local.sParams)
+						F.Global.General.CallWrapperSync(200000,V.Local.sParams)
+					f.Intrinsic.Control.Else						
+						f.Intrinsic.Control.If(v.Global.bViewSO)
+							F.Intrinsic.String.Build("{0}!*!V!*!{1}",V.Local.sSO,V.Local.sCustomer,V.Local.sParams)
+							F.Global.General.CallWrapperSync(200000,V.Local.sParams)
+						f.Intrinsic.Control.EndIf						
+					f.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.Case("QUOTE")								
+					f.Intrinsic.Control.If(v.Global.bEditQuote)
+						F.Intrinsic.String.Build("{0}!*!O",V.Local.sQte,V.Local.sParams)
+						F.Global.General.CallWrapperSync(251000,V.Local.sParams)
+					f.Intrinsic.Control.Else						
+						f.Intrinsic.Control.If(v.Global.bViewQuote)
+							F.Intrinsic.String.Build("{0}!*!V",V.Local.sQte,V.Local.sParams)
+							F.Global.General.CallWrapperSync(251000,V.Local.sParams)
+						f.Intrinsic.Control.EndIf	
+					f.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndSelect
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.UnBlockEvents
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndTry
+Program.Sub.gsgcOpp_RowCellClick.End
+
+Program.Sub.Load_Events.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	v.Local.sSQL.Declare
+	
+	F.Intrinsic.Control.If(V.DataTable.dtEvents.Exists)
+		F.Data.DataTable.Close("dtEvents")
+	F.Intrinsic.Control.EndIf
+			
+	'Create DataTable
+	F.Intrinsic.Control.If(V.Global.bIsCRMsupervisor)
+		V.Local.sSQL.Set("SELECT COMPID,CASE WHEN COMPTYPE = 15 THEN VCM.NAME_CUSTOMER WHEN COMPTYPE = 18 THEN PM.NAME_PROSPECT WHEN COMPTYPE = 19 THEN PM.NAME_PROSPECT WHEN COMPTYPE = 10 THEN VVM.NAME_VENDOR END,CASE WHEN COMPTYPE = 15 THEN 'C' WHEN COMPTYPE = 18 THEN 'P' WHEN COMPTYPE = 19 THEN 'S' WHEN COMPTYPE = 10 THEN 'V' END,TITLE,CET.VALUE,RCPT,CES.VALUE,IF(CLOSE_DATETIME IS NULL,'Open','Closed'),CASE WHEN PRIORITY = 0 THEN '0- Low' WHEN PRIORITY = 1 THEN '1- Med.' WHEN PRIORITY = 2 THEN '2- High' END,CLOSE_DATETIME,START_DATETIME,END_DATETIME,DESCRIPTION,COMPTYPE FROM CRM_EVENTS CE LEFT JOIN V_CUSTOMER_MASTER VCM ON CE.COMPID = VCM.CUSTOMER LEFT JOIN PROSPECT_MASTER PM ON CE.COMPID = PM.PROSPECT LEFT JOIN V_VENDOR_MASTER VVM ON CE.COMPID = VVM.VENDOR LEFT JOIN CRM_EVENT_TYPE CET ON CE.ETYPE = CET.SEQ LEFT JOIN CRM_EVENT_STATUS CES ON CE.STATUS = CES.SEQ ORDER BY EID;")
+	F.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("SELECT COMPID,CASE WHEN COMPTYPE = 15 THEN VCM.NAME_CUSTOMER WHEN COMPTYPE = 18 THEN PM.NAME_PROSPECT WHEN COMPTYPE = 19 THEN PM.NAME_PROSPECT WHEN COMPTYPE = 10 THEN VVM.NAME_VENDOR END,CASE WHEN COMPTYPE = 15 THEN 'C' WHEN COMPTYPE = 18 THEN 'P' WHEN COMPTYPE = 19 THEN 'S' WHEN COMPTYPE = 10 THEN 'V' END,TITLE,CET.VALUE,RCPT,CES.VALUE,IF(CLOSE_DATETIME IS NULL,'Open','Closed'),CASE WHEN PRIORITY = 0 THEN '0- Low' WHEN PRIORITY = 1 THEN '1- Med.' WHEN PRIORITY = 2 THEN '2- High' END,CLOSE_DATETIME,START_DATETIME,END_DATETIME,DESCRIPTION,COMPTYPE FROM CRM_EVENTS CE LEFT JOIN V_CUSTOMER_MASTER VCM ON CE.COMPID = VCM.CUSTOMER LEFT JOIN PROSPECT_MASTER PM ON CE.COMPID = PM.PROSPECT LEFT JOIN V_VENDOR_MASTER VVM ON CE.COMPID = VVM.VENDOR LEFT JOIN CRM_EVENT_TYPE CET ON CE.ETYPE = CET.SEQ LEFT JOIN CRM_EVENT_STATUS CES ON CE.STATUS = CES.SEQ and (VCM.CUSTOMER IN (SELECT CUSTOMER FROM V_CUSTOMER_MASTER WHERE (ASSGN_USR_GRP IN ({0}) AND CRM_RES_LEV = '2') OR (ASSGN_USR_GRP = '{1}' AND CRM_RES_LEV = '1') OR (CRM_RES_LEV = '0')) OR PM.PROSPECT IN (SELECT PROSPECT FROM V_PROSPECT_MASTER WHERE (ASSGN_USR_GRP IN ({0}) AND CRM_RES_LEV = '2') OR (ASSGN_USR_GRP = '{1}' AND CRM_RES_LEV = '1') OR (CRM_RES_LEV = '0')) OR VVM.VENDOR IN (SELECT VENDOR FROM V_VENDOR_MASTER)) ORDER BY EID;",v.Global.sUserGroups,v.Caller.User,v.Local.sSQL)
+	F.Intrinsic.Control.EndIf
+	
+	'Create DataTable
+	F.Data.DataTable.CreateFromSQL("dtEvents","con",v.Local.sSQL,True)
+	'Create GridView
+	Gui.frmCRM.GsGCEvents.AddGridViewFromDataTable("gvEvents","dtEvents")
+	'Suspend Layout
+	Gui.frmCRM.GsGCEvents.SuspendLayout()
+	'Setup Grid Properties
+	Gui.frmCRM.GsGCEvents.SetGridViewProperty("gvEvents","OptionBehaviorEditable",False)
+	Gui.frmCRM.GsGCEvents.SetGridViewProperty("gvEvents","MultiSelect",True)
+	Gui.frmCRM.GsGCEvents.SetGridViewProperty("gvEvents","AllowFilter",True)
+	Gui.frmCRM.GsGCEvents.SetGridViewProperty("gvEvents","OptionsViewShowGroupPanel",True)
+	Gui.frmCRM.GsGCEvents.SetGridViewProperty("gvEvents","EnableAppearanceOddRow",True)
+	Gui.frmCRM.GsGCEvents.SetGridViewProperty("gvEvents","OptionsViewColumnAutoWidth",False)
+	'Setup Column Properties
+	'Visible
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","COMPTYPE","Visible",False)
+	'Captions
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","COMPID","Caption","Customer")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_1","Caption","Customer Name")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_2","Caption","C/P/S/V")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","TITLE","Caption","Title ")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","VALUE","Caption","Type")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","RCPT","Caption","Recipient")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","VALUE1","Caption","Status")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_3","Caption","Open/Closed")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_4","Caption","Priority")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","CLOSE_DATETIME","Caption","Closed Date")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","START_DATETIME","Caption","Start Date")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","END_DATETIME","Caption","End Date")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","DESCRIPTION","Caption","Description ")
+	'CellForeColor
+	f.Intrinsic.Control.If(v.Global.bViewCRM,=,True,or,v.Global.bEditCRM,=,True)
+		Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","COMPID","CellForeColor","Blue")
+	f.Intrinsic.Control.EndIf	
+	'MinWidth
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","COMPID","MinWidth","35")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_1","MinWidth","200")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_2","MinWidth","75")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","TITLE","MinWidth","150")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","VALUE","MinWidth","100")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","RCPT","MinWidth","100")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","VALUE1","MinWidth","100")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_3","MinWidth","95")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_4","MinWidth","50")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","CLOSE_DATETIME","MinWidth","80")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","START_DATETIME","MinWidth","80")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","END_DATETIME","MinWidth","80")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","DESCRIPTION","MinWidth","400")
+	'Fixed
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","COMPID","Fixed","Left")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_1","Fixed","Left")
+	'HeaderFontBold
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","COMPID","HeaderFontBold",True)
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_1","HeaderFontBold",True)
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_2","HeaderFontBold",True)
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","TITLE","HeaderFontBold",True)
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","VALUE","HeaderFontBold",True)
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","RCPT","HeaderFontBold",True)
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","VALUE1","HeaderFontBold",True)
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_3","HeaderFontBold",True)
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_4","HeaderFontBold",True)
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","CLOSE_DATETIME","HeaderFontBold",True)
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","START_DATETIME","HeaderFontBold",True)
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","END_DATETIME","HeaderFontBold",True)
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","DESCRIPTION","HeaderFontBold",True)
+	'HeaderHAlignment
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","COMPID","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_1","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_2","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","TITLE","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","VALUE","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","RCPT","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","VALUE1","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_3","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_4","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","CLOSE_DATETIME","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","START_DATETIME","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","END_DATETIME","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","DESCRIPTION","HeaderHAlignment","Center")
+	'CellHAlignment
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_2","CellHAlignment","Center")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_3","CellHAlignment","Center")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_4","CellHAlignment","Center")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","CLOSE_DATETIME","CellHAlignment","Center")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","START_DATETIME","CellHAlignment","Center")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","END_DATETIME","CellHAlignment","Center")
+	'CellTrimming
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","COMPID","CellTrimming","Character")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_1","CellTrimming","Character")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_2","CellTrimming","Character")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","TITLE","CellTrimming","Character")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","VALUE","CellTrimming","Character")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","RCPT","CellTrimming","Character")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","VALUE1","CellTrimming","Character")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_3","CellTrimming","Character")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","EXPR_4","CellTrimming","Character")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","CLOSE_DATETIME","CellTrimming","Character")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","START_DATETIME","CellTrimming","Character")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","END_DATETIME","CellTrimming","Character")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","DESCRIPTION","CellTrimming","Character")
+	'DisplayCustomDatetime
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","CLOSE_DATETIME","DisplayCustomDatetime","d")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","START_DATETIME","DisplayCustomDatetime","d")
+	Gui.frmCRM.GsGCEvents.SetColumnProperty("gvEvents","END_DATETIME","DisplayCustomDatetime","d")
+	'Resume Layout
+	Gui.frmCRM.GsGCEvents.ResumeLayout()
+	'Set MainView with GridView
+	Gui.frmCRM.GsGCEvents.MainView("gvEvents")
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndTry
+Program.Sub.Load_Events.End
+
+Program.Sub.GsGCEvents_RowCellClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sParams.Declare(String)
+	V.Local.sCustomer.Declare(String)
+	V.Local.iType.Declare(Long)
+	V.Local.iHandle.Declare(Long)
+	v.Local.bEdit.Declare(boolean)		
+	
+	'Mode 9: View Mode with the company tab selected by default
+	'Mode 1: Edit Mode with the company tab selected by default
+	
+	f.Intrinsic.Control.BlockEvents	
+	F.Intrinsic.Control.If(V.Args.Button,=,"Left")
+		Gui.frmCRM.GsGCEvents.GetCellValueByColumnName("gvEvents","COMPID",V.Args.RowIndex,V.Local.sCustomer)
+		Gui.frmCRM.GsGCEvents.GetCellValueByColumnName("gvEvents","COMPTYPE",V.Args.RowIndex,V.Local.iType)
+
+		F.Intrinsic.Control.If(V.Args.Column,=,"COMPID")
+			F.Intrinsic.Control.If(V.Screen.frmCRM!optView.Value,=,True)
+				f.Intrinsic.Control.If(v.Global.bViewCRM)					
+					F.Intrinsic.String.Build("MODE::9*!*COMPANY-NUMBER::{0}*!*COMPANY-TYPE::{1}",V.Local.sCustomer,V.Local.iType,V.Local.sParams)
+					F.Global.CRM.Invoke(V.Local.sParams,V.Local.iHandle)	
+				f.Intrinsic.Control.EndIf				
+			F.Intrinsic.Control.ElseIf(V.Screen.frmCRM!optView.Value,=,False)				
+				f.Intrinsic.Control.If(v.Global.bEditCRM)					
+					F.Intrinsic.String.Build("MODE::1*!*COMPANY-NUMBER::{0}*!*COMPANY-TYPE::{1}",V.Local.sCustomer,V.Local.iType,V.Local.sParams)
+					F.Global.CRM.Invoke(V.Local.sParams,V.Local.iHandle)
+				f.Intrinsic.Control.Else
+					f.Intrinsic.Control.If(v.Global.bViewCRM)						
+						F.Intrinsic.String.Build("MODE::9*!*COMPANY-NUMBER::{0}*!*COMPANY-TYPE::{1}",V.Local.sCustomer,V.Local.iType,V.Local.sParams)
+						F.Global.CRM.Invoke(V.Local.sParams,V.Local.iHandle)
+					f.Intrinsic.Control.EndIf					
+				f.Intrinsic.Control.EndIf				
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.UnBlockEvents
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndTry
+Program.Sub.GsGCEvents_RowCellClick.End
+
+Program.Sub.Load_Notes.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	V.Local.sSQL.Declare
+	
+	F.Intrinsic.Control.If(V.DataTable.dtNotes.Exists)
+		F.Data.DataTable.Close("dtNotes")
+	F.Intrinsic.Control.EndIf
+	
+	'Create DataTable
+	'Check to see if is CRM supervisor, show all or filter based on crm security
+	F.Intrinsic.Control.If(V.Global.bIsCRMsupervisor)
+		V.Local.sSQL.Set("SELECT CID,COMPID,CASE WHEN COMPTYPE = 15 THEN VCM.NAME_CUSTOMER WHEN COMPTYPE = 18 THEN PM.NAME_PROSPECT WHEN COMPTYPE = 19 THEN PM.NAME_PROSPECT WHEN COMPTYPE = 10 THEN VVM.NAME_VENDOR END,CASE WHEN COMPTYPE = 15 THEN 'C' WHEN COMPTYPE = 18 THEN 'P' WHEN COMPTYPE = 19 THEN 'S' WHEN COMPTYPE = 10 THEN 'V' END,CASE WHEN NTYPE = 0 THEN 'Main' WHEN NTYPE = 1 THEN 'Contact' WHEN NTYPE = 2 THEN 'Opportunity' END,'' AS NAME,CNC.NOTES,CNC.LAST_CHG_BY,CNC.LAST_CHG_DATETIME,COMPTYPE FROM CRM_NOTES_COMBINED CNC LEFT JOIN V_CUSTOMER_MASTER VCM ON CNC.COMPID = VCM.CUSTOMER LEFT JOIN PROSPECT_MASTER PM ON CNC.COMPID = PM.PROSPECT LEFT JOIN V_VENDOR_MASTER VVM ON CNC.COMPID = VVM.VENDOR WHERE CNC.COMPID <> ''")
+	F.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("SELECT CID,COMPID,CASE WHEN COMPTYPE = 15 THEN VCM.NAME_CUSTOMER WHEN COMPTYPE = 18 THEN PM.NAME_PROSPECT WHEN COMPTYPE = 19 THEN PM.NAME_PROSPECT WHEN COMPTYPE = 10 THEN VVM.NAME_VENDOR END,CASE WHEN COMPTYPE = 15 THEN 'C' WHEN COMPTYPE = 18 THEN 'P' WHEN COMPTYPE = 19 THEN 'S' WHEN COMPTYPE = 10 THEN 'V' END,CASE WHEN NTYPE = 0 THEN 'Main' WHEN NTYPE = 1 THEN 'Contact' WHEN NTYPE = 2 THEN 'Opportunity' END,'' AS NAME,CNC.NOTES,CNC.LAST_CHG_BY,CNC.LAST_CHG_DATETIME,COMPTYPE FROM CRM_NOTES_COMBINED CNC LEFT JOIN V_CUSTOMER_MASTER VCM ON CNC.COMPID = VCM.CUSTOMER LEFT JOIN PROSPECT_MASTER PM ON CNC.COMPID = PM.PROSPECT LEFT JOIN V_VENDOR_MASTER VVM ON CNC.COMPID = VVM.VENDOR WHERE CNC.COMPID <> '' and (VCM.CUSTOMER IN (SELECT CUSTOMER FROM V_CUSTOMER_MASTER WHERE (ASSGN_USR_GRP IN ({0}) AND CRM_RES_LEV = '2') OR (ASSGN_USR_GRP = '{1}' AND CRM_RES_LEV = '1') OR (CRM_RES_LEV = '0')) OR PM.PROSPECT IN (SELECT PROSPECT FROM V_PROSPECT_MASTER WHERE (ASSGN_USR_GRP IN ({0}) AND CRM_RES_LEV = '2') OR (ASSGN_USR_GRP = '{1}' AND CRM_RES_LEV = '1') OR (CRM_RES_LEV = '0')) OR VVM.VENDOR IN (SELECT VENDOR FROM V_VENDOR_MASTER)) ORDER BY COMPID;",v.Global.sUserGroups,v.Caller.User,v.Local.sSQL)
+	F.Intrinsic.Control.EndIf
+		
+	F.Data.DataTable.CreateFromSQL("dtNotes","con",v.Local.sSQL,True)
+	'Fill in Contact Name
+	F.Data.Dictionary.CreateFromSQL("dContact","con","SELECT ALT_ID,NAME FROM CONTACT;")
+	F.Data.DataTable.FillFromDictionary("dtNotes","dContact","CID","NAME")
+	F.Data.Dictionary.Close("dContact")
+	'Create GridView
+	Gui.frmCRM.GsGCNotes.AddGridViewFromDataTable("gvNotes","dtNotes")
+	'Suspend Layout
+	Gui.frmCRM.GsGCNotes.SuspendLayout()
+	'Setup Grid Properties	
+	Gui.frmCRM.GsGCNotes.SetGridViewProperty("gvNotes","MultiSelect",True)
+	Gui.frmCRM.GsGCNotes.SetGridViewProperty("gvNotes","AllowFilter",True)
+	Gui.frmCRM.GsGCNotes.SetGridViewProperty("gvNotes","OptionsViewShowGroupPanel",True)
+	Gui.frmCRM.GsGCNotes.SetGridViewProperty("gvNotes","EnableAppearanceOddRow",True)
+	Gui.frmCRM.GsGCNotes.SetGridViewProperty("gvNotes","OptionsViewColumnAutoWidth",False)
+	'Setup Column Properties
+	'Visible
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","COMPTYPE","Visible",False)
+	'Captions
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","COMPID","Caption","Customer")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_1","Caption","Customer Name")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_2","Caption","C/P/S/V")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_3","Caption","Type")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","NAME","Caption","Contact")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","NOTES","Caption","Notes ")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","LAST_CHG_BY","Caption","Last Change By")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","LAST_CHG_DATETIME","Caption","Last Change Date")
+	'CellForeColor
+	f.Intrinsic.Control.If(v.Global.bViewCRM,=,True,or,v.Global.bEditCRM,=,True)
+		Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","COMPID","CellForeColor","Blue")
+	f.Intrinsic.Control.EndIf
+	'MinWidth
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","COMPID","MinWidth","35")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_1","MinWidth","200")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_2","MinWidth","75")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_3","MinWidth","50")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","NAME","MinWidth","150")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","NOTES","MinWidth","900")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","LAST_CHG_BY","MinWidth","100")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","LAST_CHG_DATETIME","MinWidth","100")
+	'Fixed
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","COMPID","Fixed","Left")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_1","Fixed","Left")
+	'HeaderFontBold
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","COMPID","HeaderFontBold",True)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_1","HeaderFontBold",True)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_2","HeaderFontBold",True)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_3","HeaderFontBold",True)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","NAME","HeaderFontBold",True)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","NOTES","HeaderFontBold",True)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","LAST_CHG_BY","HeaderFontBold",True)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","LAST_CHG_DATETIME","HeaderFontBold",True)
+	'HeaderHAlignment
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","COMPID","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_1","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_2","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_3","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","NAME","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","NOTES","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","LAST_CHG_BY","HeaderHAlignment","Center")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","LAST_CHG_DATETIME","HeaderHAlignment","Center")
+	'CellHAlignment
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_2","CellHAlignment","Center")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","LAST_CHG_DATETIME","CellHAlignment","Center")
+	'AllowEdit
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","COMPID","AllowEdit",False)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_1","AllowEdit",False)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_2","AllowEdit",False)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_3","AllowEdit",False)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","NAME","AllowEdit",False)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","NOTES","AllowEdit",True)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","LAST_CHG_BY","AllowEdit",False)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","LAST_CHG_DATETIME","AllowEdit",False)
+	'ReadOnly
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","COMPID","ReadOnly",True)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_1","ReadOnly",True)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_2","ReadOnly",True)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_3","ReadOnly",True)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","NAME","ReadOnly",True)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","NOTES","ReadOnly",True)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","LAST_CHG_BY","ReadOnly",True)
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","LAST_CHG_DATETIME","ReadOnly",True)
+	'CellWordWrap
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","NOTES","CellWordWrap","Wrap")
+	'CellTrimming
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","COMPID","CellTrimming","Character")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_1","CellTrimming","Character")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_2","CellTrimming","Character")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","EXPR_3","CellTrimming","Character")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","NAME","CellTrimming","Character")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","LAST_CHG_BY","CellTrimming","Character")
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","LAST_CHG_DATETIME","CellTrimming","Character")
+	'DisplayCustomDatetime
+	Gui.frmCRM.GsGCNotes.SetColumnProperty("gvNotes","LAST_CHG_DATETIME","DisplayCustomDatetime","d")
+	'Resume Layout
+	Gui.frmCRM.GsGCNotes.ResumeLayout()
+	'Set MainView with GridView
+	Gui.frmCRM.GsGCNotes.MainView("gvNotes")
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndTry
+Program.Sub.Load_Notes.End
+
+Program.Sub.GsGCNotes_RowCellClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sParams.Declare(String)
+	V.Local.sCustomer.Declare(String)
+	V.Local.iType.Declare(Long)
+	V.Local.iHandle.Declare(Long)
+	v.Local.bEdit.Declare(boolean)
+	
+	'Mode 9: View Mode with the company tab selected by default
+	'Mode 1: Edit Mode with the company tab selected by default
+	
+	f.Intrinsic.Control.BlockEvents
+	F.Intrinsic.Control.If(V.Args.Button,=,"Left")
+		Gui.frmCRM.GsGCNotes.GetCellValueByColumnName("gvNotes","COMPID",V.Args.RowIndex,V.Local.sCustomer)
+		Gui.frmCRM.GsGCNotes.GetCellValueByColumnName("gvNotes","COMPTYPE",V.Args.RowIndex,V.Local.iType)
+						
+		F.Intrinsic.Control.If(V.Args.Column,=,"COMPID")
+			F.Intrinsic.Control.If(V.Screen.frmCRM!optView.Value,=,True)
+				f.Intrinsic.Control.If(v.Global.bViewCRM)
+					F.Intrinsic.String.Build("MODE::9*!*COMPANY-NUMBER::{0}*!*COMPANY-TYPE::{1}",V.Local.sCustomer,V.Local.iType,V.Local.sParams)
+					F.Global.CRM.Invoke(V.Local.sParams,V.Local.iHandle)	
+				f.Intrinsic.Control.EndIf				
+			F.Intrinsic.Control.ElseIf(V.Screen.frmCRM!optView.Value,=,False)				
+				f.Intrinsic.Control.If(v.Global.bEditCRM)
+					F.Intrinsic.String.Build("MODE::1*!*COMPANY-NUMBER::{0}*!*COMPANY-TYPE::{1}",V.Local.sCustomer,V.Local.iType,V.Local.sParams)
+					F.Global.CRM.Invoke(V.Local.sParams,V.Local.iHandle)
+				f.Intrinsic.Control.Else
+					f.Intrinsic.Control.If(v.Global.bViewCRM)
+						F.Intrinsic.String.Build("MODE::9*!*COMPANY-NUMBER::{0}*!*COMPANY-TYPE::{1}",V.Local.sCustomer,V.Local.iType,V.Local.sParams)
+						F.Global.CRM.Invoke(V.Local.sParams,V.Local.iHandle)
+					f.Intrinsic.Control.EndIf					
+				f.Intrinsic.Control.EndIf			
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.UnBlockEvents
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndTry
+Program.Sub.GsGCNotes_RowCellClick.End
+
+Program.Sub.picGSSLogo_DblClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	F.Intrinsic.Task.ShellExec(0,"Open","http://www.globalshopsolutions.com/login-customer","","",0)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndTry
+Program.Sub.picGSSLogo_DblClick.End
+
+Program.Sub.Serialize.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSerialize.Declare
+	
+	'gvOpp
+	Gui.frmCRM.GsGCOpp.Serialize("gvOpp",V.Local.sSerialize)
+	F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"GVOPP",6335,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,V.Local.sSerialize)
+	'gvEvents
+	Gui.frmCRM.GsGCEvents.Serialize("gvEvents",V.Local.sSerialize)
+	F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"GVEVENTS",6335,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,V.Local.sSerialize)
+	'gvNotes
+	Gui.frmCRM.GsGCNotes.Serialize("gvNotes",V.Local.sSerialize)
+	F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"GVNOTES",6335,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,V.Local.sSerialize)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndTry
+Program.Sub.Serialize.End
+
+Program.Sub.Deserialize.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSerialize.Declare
+	
+	'Delete old registry records
+	F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"GVOPP",6335,0,5,"",V.Local.sSerialize)
+	F.Intrinsic.Control.If(V.Local.sSerialize,<>,"")
+		F.ODBC.Connection!common.OpenConnection(V.Ambient.Ccon,V.Ambient.Cuser,V.Ambient.Cpass)
+		F.ODBC.Connection!common.Execute("Delete From Gs_Registry Where Reg_ID = 6335 And Seq < 1000;")
+		F.ODBC.Connection!common.Close
+	F.Intrinsic.Control.EndIf
+
+	'GvAllPOs
+	F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"GVOPP",6335,1000,6,"",V.Local.sSerialize)
+	F.Intrinsic.Control.If(V.Local.sSerialize.Trim,<>,"")
+		Gui.frmCRM.GsGCOpp.Deserialize(V.Local.sSerialize)
+	F.Intrinsic.Control.EndIf
+	'GvExpToday
+	F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"GVEVENTS",6335,1000,6,"",V.Local.sSerialize)
+	F.Intrinsic.Control.If(V.Local.sSerialize.Trim,<>,"")
+		Gui.frmCRM.GsGCEvents.Deserialize(V.Local.sSerialize)
+	F.Intrinsic.Control.EndIf
+	'GvPastDue
+	F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"GVNOTES",6335,1000,6,"",V.Local.sSerialize)
+	F.Intrinsic.Control.If(V.Local.sSerialize.Trim,<>,"")
+		Gui.frmCRM.GsGCNotes.Deserialize(V.Local.sSerialize)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndTry
+Program.Sub.Deserialize.End
+
+Program.Sub.CheckCRMSECURITY.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSQL.Declare	
+	
+	'This sub checks which user groups this user is in so that when we load the data it can filter out the ones that the user should not see based on crm user security
+	'If user is CRM supervisor, it bypasses the check for crm security and shows all records.
+	
+	f.ODBC.Connection!cony.opencommonconnection
+	
+	f.Intrinsic.String.Build("SELECT A.BVAL FROM USER_OPTIONS_COM A LEFT JOIN USER_INFORMATION B ON A.USER_ID = B.USER_ID WHERE B.GS_USER = '{0}' AND A.OPTION_ID = '1010' AND A.COMPANY = '{1}';",V.Caller.User,V.Caller.CompanyCode,V.Local.sSQL)
+	
+	F.ODBC.Connection!CONY.EXECUTEANDRETURN(V.Local.sSQL,V.Global.bIsCRMsupervisor)
+	
+	f.Intrinsic.Control.If(V.Global.bIsCRMsupervisor)
+		F.Intrinsic.Control.ExitSub
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.String.Build("SELECT DISTINCT A.GS_GROUP FROM USER_GROUPS A LEFT JOIN MENU_SECURITY_ASSOC B ON A.GROUP_ID = B.GROUP_ID LEFT JOIN USER_INFORMATION C ON C.USER_ID = B.USER_ID WHERE C.GS_USER = '{0}';",v.Caller.User,v.Local.sSQL)
+	
+	f.ODBC.Connection!cony.executeandreturn(v.Local.sSQL,v.Global.sUserGroups)
+	
+	f.Intrinsic.String.Build("'{0}'",v.Global.sUserGroups,v.Global.sUserGroups)
+	f.Intrinsic.String.Replace(v.Global.sUserGroups,"#$#","','",v.Global.sUserGroups)
+	
+	f.ODBC.Connection!cony.Close
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndTry
+Program.Sub.CheckCRMSECURITY.End
+
+Program.Sub.GsGCOpp_CellValueChanged.Start
+F.Intrinsic.Control.Try
+
+V.Local.sError.Declare
+
+V.Local.sSQL.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sNumber.Declare(String)
+
+F.Intrinsic.Control.SelectCase(V.Args.Column.UCase)
+	F.Intrinsic.Control.CaseAny("BED_COUNT", "DAILY_CENSUS", "AVERAGE_LENGTH", "PERCENT_QUALIFIED", "PRICE", "EXPECTED_REVENUE", "PROJECTED_STRAPS")
+		F.Intrinsic.String.Build("select OID from GCG_6335_FIELDS where OID = {0}", V.DataTable.dtOpp(V.Args.RowIndex).OID!FieldValLong, V.Local.sSQL)
+		F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSQL, V.Local.sRet)
+		F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+			F.Intrinsic.String.Build("insert into GCG_6335_FIELDS (OID, {0}) values ({1}, {2})", V.Args.Column, V.DataTable.dtOpp(V.Args.RowIndex).OID!FieldValLong, V.DataTable.dtOpp(V.Args.RowIndex).[V.Args.Column]!FieldVal, V.Local.sSQL)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("update GCG_6335_FIELDS set {0} = {1} where OID = {2}", V.Args.Column, V.DataTable.dtOpp(V.Args.RowIndex).[V.Args.Column]!FieldVal, V.DataTable.dtOpp(V.Args.RowIndex).OID!FieldValLong, V.Local.sSQL)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Connection!con.Execute(V.Local.sSQL)
+		
+		F.Intrinsic.String.Format(V.DataTable.dtOpp(V.Args.RowIndex).EXPECTED_REVENUE!FieldValFloat, "0.00", V.Local.sNumber)
+		F.Intrinsic.String.Build("update CRM_OPP_MASTER set OREVENUE = {0} where OID = {1}", V.Local.sNumber, V.DataTable.dtOpp(V.Args.RowIndex).OID!FieldValLong, V.Local.sSQL)
+		F.ODBC.Connection!con.Execute(V.Local.sSQL)
+
+		F.Intrinsic.Control.CallSub(LoadCharts)
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.GsGCOpp_CellValueChanged.End
+
+Program.Sub.GsGCOpp_ColumnFilterChanged.Start
+F.Intrinsic.Control.Try
+
+V.Local.sError.Declare
+
+F.Intrinsic.Control.CallSub(LoadCharts)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.GsGCOpp_ColumnFilterChanged.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$$}$12:00:00 AM$}$False
+${$5$}$3.0.0.0$}$1
+${$6$}$rseddon$}$20210425192931488$}$DkKb6sybY9hE3N0enyRwKJuHSlMGTgRb3kfjZs9zqkHs1dF7allbseJW7/MepHCHPz68cX+Sp/o=
+Program.Sub.Comments.End
